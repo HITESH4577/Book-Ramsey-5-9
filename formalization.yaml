@@ -19,21 +19,37 @@ classification:
   msc2020:
   - 05D10
 sources:
-- title: Exact determination of R(B5,B9) = 29, release v1.0.0
-  id: 10.5281/zenodo.24559340
-  location: https://doi.org/10.5281/zenodo.24559340
-  type: formalization
-  relationship: adapts
-  note: Module-system packaging of the previously released proof; this classification
-    does not assert priority.
+- title: Exact determination of R(B5,B9) = 29 through the matching upper bound
+  type: original-proof
+  relationship: other
+  note: The exact-value argument was first presented in this project’s standalone
+    Lean release v1.0.0. This submission repackages that same development for Comparator;
+    priority over other work is not independently established. The lower bound was
+    already reported separately.
   contributors:
   - name: ChatGPT (OpenAI)
     role: Generated substantial mathematical proof arguments, search code and Lean
       formalization.
+- title: 'R(B5,B9) ≥ 29: record lower bound for the book Ramsey number R(B5,B9)'
+  authors:
+  - Quantavane
+  type: web post
+  relationship: background
+  location: https://quantavane.com/achievements/ramsey-numbers/ramsey-b5-b9/
+  note: Prior report of a 28-vertex colouring establishing the lower bound 29. The
+    present project verifies its own explicit lower-bound certificate and provides
+    a matching upper-bound argument; no priority is claimed for the lower bound.
+- title: Small Ramsey Numbers, revision 18 (2026)
+  authors:
+  - Stanisław Radziszowski
+  type: survey
+  relationship: background
+  location: https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1
+  note: Background reference for previously reported Ramsey bounds.
 status:
   scope: Exact least order, both bounds and monotonicity. Challenge has one intentional
-    sorry; the Solution and proof development have none. The new module-system package
-    has not been compiled yet.
+    sorry; the Solution and proof development have none. The pinned project passed
+    Palomar mechanical verification at commit 5c12f8dcaa6e290a0394ce474ef55e9cd3273765.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -65,9 +81,11 @@ review:
   status: self-assessed
   reviewers:
   - HITESH4577
-  notes: Original standalone source accepted by Lean Web with standard axioms only,
-    as recorded in screenshots. The new pinned project and Comparator have not yet
-    been run. Independent originality and review remain pending.
+  notes: Original standalone source accepted by Lean Web with standard axioms only.
+    Palomar mechanical verification passed and automated editorial review identified
+    no blocking problems at commit 5c12f8dcaa6e290a0394ce474ef55e9cd3273765; this
+    metadata revision addresses its non-blocking provenance warning. Independent originality
+    confirmation remains pending.
 alignment:
   namespace: Book59Submission
   statements:
@@ -75,6 +93,12 @@ alignment:
     lean: Book59Submission.exact_value
     module: Solution
     status: proved
-    note: Delegates to the previously browser-verified theorem; this wrapper still
-      requires compilation.
+    note: Delegates to the previously browser-verified theorem; the wrapper passed
+      Palomar mechanical verification at the preceding commit.
 acknowledgements: Lean, Mathlib, and ChatGPT (OpenAI).
+related_formalizations:
+- id: https://doi.org/10.5281/zenodo.24559340
+  relationship: adapts
+  note: Earlier standalone Lean release v1.0.0 of the same exact-value proof, archived
+    on Zenodo. This submission adds module packaging and Comparator wrappers, not
+    a different mathematical result.
