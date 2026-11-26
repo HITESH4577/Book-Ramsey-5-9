@@ -4,11 +4,7 @@
   "theorem_names": [
     "Book59Submission.exact_value"
   ],
-  "definition_names": [
-    "Book59Exact.commonN",
-    "Book59Exact.blueN",
-    "Book59Exact.RamseyProperty"
-  ],
+  "definition_names": [],
   "permitted_axioms": [
     "propext",
     "Quot.sound",
