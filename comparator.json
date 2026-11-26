@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "Book59Submission.exact_value"
+  ],
+  "definition_names": [
+    "Book59Exact.commonN",
+    "Book59Exact.blueN",
+    "Book59Exact.RamseyProperty"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

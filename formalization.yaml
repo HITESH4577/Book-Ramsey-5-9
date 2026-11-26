@@ -1,0 +1,80 @@
+version: v0.4
+project:
+  name: Exact determination of the book Ramsey number R(B5,B9) = 29
+  description: The exact two-colour book Ramsey number R(B5,B9) is 29. The proof combines
+    a 28-vertex explicit colouring, degree and deficit identities, a finite degree
+    classification, and elimination of all surviving 29-vertex cases. The formal statement
+    asserts the least order forcing a red five-page or blue nine-page book. Originality
+    is not independently confirmed.
+  authors:
+  - name: HITESH4577
+    github: HITESH4577
+  license: MIT
+  responsible_maintainers:
+  - name: HITESH4577
+    github: HITESH4577
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05D10
+sources:
+- title: Exact determination of R(B5,B9) = 29, release v1.0.0
+  id: 10.5281/zenodo.24559340
+  location: https://doi.org/10.5281/zenodo.24559340
+  type: formalization
+  relationship: adapts
+  note: Module-system packaging of the previously released proof; this classification
+    does not assert priority.
+  contributors:
+  - name: ChatGPT (OpenAI)
+    role: Generated substantial mathematical proof arguments, search code and Lean
+      formalization.
+status:
+  scope: Exact least order, both bounds and monotonicity. Challenge has one intentional
+    sorry; the Solution and proof development have none. The new module-system package
+    has not been compiled yet.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: copilot
+    models:
+    - GPT-6.2 (ChatGPT)
+    framework: ChatGPT
+    tool_setup: Interactive reasoning, computational experiments, Lean code generation
+      and user-run Lean Web checks.
+    cost:
+      wall_time: not tracked
+      spend_usd: subscription-based
+      hardware: ChatGPT hosted tools and user browser
+    prompting_notes: Iterative mathematical search, proof development and correction
+      using browser Lean diagnostics.
+  spend_usd: not tracked
+  notes: The repository owner initiated and directed the project, ran the end-to-end
+    browser verification, inspected axiom output and published the result. ChatGPT
+    generated substantial portions of the mathematical proof and formalization.
+fidelity:
+  divergences: No intended change to the mathematical statement; the new project adds
+    module visibility headers and a wrapper theorem.
+review:
+  status: self-assessed
+  reviewers:
+  - HITESH4577
+  notes: Original standalone source accepted by Lean Web with standard axioms only,
+    as recorded in screenshots. The new pinned project and Comparator have not yet
+    been run. Independent originality and review remain pending.
+alignment:
+  namespace: Book59Submission
+  statements:
+  - source: Exact value R(B5,B9) = 29
+    lean: Book59Submission.exact_value
+    module: Solution
+    status: proved
+    note: Delegates to the previously browser-verified theorem; this wrapper still
+      requires compilation.
+acknowledgements: Lean, Mathlib, and ChatGPT (OpenAI).

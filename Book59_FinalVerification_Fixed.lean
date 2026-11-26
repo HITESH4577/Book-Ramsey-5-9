@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-
 Book Ramsey B5/B9: complete enumeration-soundness CANDIDATE.
